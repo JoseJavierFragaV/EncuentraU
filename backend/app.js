@@ -16,14 +16,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Ruta principal
 app.get('/', (req, res) => {
     res.json({
         mensaje: 'API de EncuentraU funcionando correctamente'
     });
 });
 
-// Prueba de conexión con PostgreSQL
 app.get('/api/prueba-db', async (req, res) => {
     try {
         const resultado = await pool.query('SELECT NOW()');
@@ -33,10 +31,11 @@ app.get('/api/prueba-db', async (req, res) => {
             fecha: resultado.rows[0].now
         });
     } catch (error) {
-        console.error(error.message);
+        console.error('Error PostgreSQL:', error);
 
         res.status(500).json({
-            mensaje: 'Error al conectar con PostgreSQL'
+            mensaje: 'Error al conectar con PostgreSQL',
+            detalle: error.message
         });
     }
 });
