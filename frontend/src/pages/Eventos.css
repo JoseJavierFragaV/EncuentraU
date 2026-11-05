@@ -1,0 +1,198 @@
+
+.eventos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.eventos-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eventos-titulo h2 {
+    color: #452263;
+    margin: 0 0 7px;
+}
+
+.eventos-titulo p {
+    color: #82768e;
+    font-size: 13px;
+    margin: 0;
+}
+
+.eventos-titulo > span {
+    background: #eadcf7;
+    color: #54277f;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.evento-formulario,
+.evento-tabla {
+    background: white;
+    border: 1px solid #eee5f5;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.evento-formulario h3,
+.evento-tabla h3 {
+    color: #54277f;
+    margin: 0 0 20px;
+}
+
+.evento-campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.evento-campos label {
+    display: block;
+    color: #514260;
+    font-size: 13px;
+    font-weight: bold;
+    margin-block-end: 8px;
+}
+
+.evento-campos input,
+.evento-campos textarea {
+    inline-size: 100%;
+    padding: 12px;
+    border: 1px solid #e2d8ed;
+    border-radius: 7px;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+.evento-campos input:focus,
+.evento-campos textarea:focus {
+    border-color: #9561c8;
+}
+
+.evento-descripcion {
+    grid-column: 1 / -1;
+}
+
+.evento-campos textarea {
+    min-block-size: 90px;
+    resize: vertical;
+}
+
+.evento-botones {
+    display: flex;
+    gap: 10px;
+    margin-block-start: 20px;
+}
+
+.evento-botones button {
+    padding: 11px 17px;
+    background: #7846b5;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.evento-botones .btn-cancelar-evento {
+    background: #eee8f4;
+    color: #54277f;
+}
+
+.evento-mensaje,
+.evento-error {
+    padding: 12px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.evento-mensaje {
+    background: #eaf7ee;
+    color: #26743c;
+}
+
+.evento-error {
+    background: #fff0f1;
+    color: #b42335;
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+}
+
+.evento-tabla table {
+    inline-size: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.evento-tabla th {
+    background: #f6f0fb;
+    color: #54277f;
+    text-align: start;
+}
+
+.evento-tabla th,
+.evento-tabla td {
+    padding: 14px 12px;
+    border-block-end: 1px solid #eee8f4;
+}
+
+.evento-tabla td {
+    color: #5f536b;
+}
+
+.evento-activo,
+.evento-inactivo {
+    padding: 5px 9px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.evento-activo {
+    background: #eaf7ee;
+    color: #26743c;
+}
+
+.evento-inactivo {
+    background: #fff0f1;
+    color: #b42335;
+}
+
+.acciones-evento {
+    display: flex;
+    gap: 7px;
+}
+
+.acciones-evento button {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.btn-editar-evento {
+    background: #eee5f7;
+    color: #54277f;
+}
+
+.btn-desactivar-evento {
+    background: #fff0f1;
+    color: #b42335;
+}
+
+@media (max-width: 700px) {
+    .evento-campos {
+        grid-template-columns: 1fr;
+    }
+
+    .evento-descripcion {
+        grid-column: auto;
+    }
+}

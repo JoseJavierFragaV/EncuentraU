@@ -1,0 +1,206 @@
+
+.usuarios-container {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.usuarios-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.usuarios-titulo h2 {
+    color: #452263;
+    margin: 0 0 7px;
+}
+
+.usuarios-titulo p {
+    color: #82768e;
+    font-size: 13px;
+    margin: 0;
+}
+
+.usuarios-titulo > span {
+    background: #eadcf7;
+    color: #54277f;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.usuario-formulario,
+.usuario-tabla {
+    background: white;
+    border: 1px solid #eee5f5;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.usuario-formulario h3,
+.usuario-tabla h3 {
+    color: #54277f;
+    margin: 0 0 20px;
+}
+
+.usuario-campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.usuario-campos label {
+    display: block;
+    color: #514260;
+    font-size: 13px;
+    font-weight: bold;
+    margin-block-end: 8px;
+}
+
+.usuario-campos input,
+.usuario-campos select {
+    inline-size: 100%;
+    padding: 12px;
+    border: 1px solid #e2d8ed;
+    border-radius: 7px;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+.usuario-campos input:focus,
+.usuario-campos select:focus {
+    border-color: #9561c8;
+}
+
+.usuario-botones {
+    display: flex;
+    gap: 10px;
+    margin-block-start: 20px;
+}
+
+.usuario-botones button {
+    padding: 11px 17px;
+    background: #7846b5;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.usuario-botones button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.usuario-botones .btn-cancelar-usuario {
+    background: #eee8f4;
+    color: #54277f;
+}
+
+.usuario-mensaje,
+.usuario-error {
+    padding: 12px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.usuario-mensaje {
+    background: #eaf7ee;
+    color: #26743c;
+}
+
+.usuario-error {
+    background: #fff0f1;
+    color: #b42335;
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+}
+
+.usuario-tabla table {
+    inline-size: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.usuario-tabla th {
+    background: #f6f0fb;
+    color: #54277f;
+    text-align: start;
+}
+
+.usuario-tabla th,
+.usuario-tabla td {
+    padding: 14px 12px;
+    border-block-end: 1px solid #eee8f4;
+}
+
+.usuario-tabla td {
+    color: #5f536b;
+}
+
+.usuario-activo,
+.usuario-inactivo {
+    padding: 5px 9px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.usuario-activo {
+    background: #eaf7ee;
+    color: #26743c;
+}
+
+.usuario-inactivo {
+    background: #fff0f1;
+    color: #b42335;
+}
+
+.acciones-usuario {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+.acciones-usuario button {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.btn-editar-usuario {
+    background: #eee5f7;
+    color: #54277f;
+}
+
+.btn-activar-usuario {
+    background: #eaf7ee;
+    color: #26743c;
+}
+
+.btn-desactivar-usuario {
+    background: #fff4e5;
+    color: #a15c00;
+}
+
+.btn-eliminar-usuario {
+    background: #fff0f1;
+    color: #b42335;
+}
+
+@media (max-width: 700px) {
+    .usuario-campos {
+        grid-template-columns: 1fr;
+    }
+
+    .usuarios-titulo {
+        align-items: flex-start;
+        gap: 12px;
+    }
+}

@@ -1,0 +1,186 @@
+
+.categorias-container {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.categorias-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categorias-titulo h2 {
+    color: #452263;
+    margin: 0 0 7px;
+}
+
+.categorias-titulo p {
+    color: #82768e;
+    font-size: 13px;
+    margin: 0;
+}
+
+.categorias-titulo > span {
+    background: #eadcf7;
+    color: #54277f;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.categoria-formulario,
+.categoria-tabla {
+    background: white;
+    border: 1px solid #eee5f5;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.categoria-formulario h3,
+.categoria-tabla h3 {
+    color: #54277f;
+    margin: 0 0 20px;
+}
+
+.categoria-campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.categoria-campos label {
+    display: block;
+    color: #514260;
+    font-size: 13px;
+    font-weight: bold;
+    margin-block-end: 8px;
+}
+
+.categoria-campos input {
+    inline-size: 100%;
+    padding: 12px;
+    border: 1px solid #e2d8ed;
+    border-radius: 7px;
+    outline: none;
+}
+
+.categoria-campos input:focus {
+    border-color: #9561c8;
+}
+
+.categoria-botones {
+    display: flex;
+    gap: 10px;
+    margin-block-start: 20px;
+}
+
+.categoria-botones button {
+    padding: 11px 17px;
+    background: #7846b5;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.categoria-botones .btn-cancelar {
+    background: #eee8f4;
+    color: #54277f;
+}
+
+.categoria-mensaje,
+.categoria-error {
+    padding: 12px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.categoria-mensaje {
+    background: #eaf7ee;
+    color: #26743c;
+}
+
+.categoria-error {
+    background: #fff0f1;
+    color: #b42335;
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+}
+
+.categoria-tabla table {
+    inline-size: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.categoria-tabla th {
+    background: #f6f0fb;
+    color: #54277f;
+    text-align: start;
+}
+
+.categoria-tabla th,
+.categoria-tabla td {
+    padding: 14px 12px;
+    border-block-end: 1px solid #eee8f4;
+}
+
+.categoria-tabla td {
+    color: #5f536b;
+}
+
+.estado-activo,
+.estado-inactivo {
+    padding: 5px 9px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.estado-activo {
+    background: #eaf7ee;
+    color: #26743c;
+}
+
+.estado-inactivo {
+    background: #fff0f1;
+    color: #b42335;
+}
+
+.acciones-categoria {
+    display: flex;
+    gap: 7px;
+}
+
+.acciones-categoria button {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.btn-editar {
+    background: #eee5f7;
+    color: #54277f;
+}
+
+.btn-desactivar {
+    background: #fff0f1;
+    color: #b42335;
+}
+
+@media (max-width: 700px) {
+    .categoria-campos {
+        grid-template-columns: 1fr;
+    }
+}
+.btn-activar {
+    background: #eaf7ee;
+    color: #26743c;
+}
