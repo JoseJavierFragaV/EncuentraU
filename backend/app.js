@@ -1,3 +1,4 @@
+
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
@@ -40,7 +41,6 @@ app.get('/api/prueba-db', async (req, res) => {
     }
 });
 
-
 app.use('/api/categorias', categoriaRoutes);
 app.use('/api/ubicaciones', ubicacionRoutes);
 app.use('/api/eventos', eventoRoutes);
@@ -50,8 +50,8 @@ app.use('/api/reportes', reporteRoutes);
 
 const PORT = process.env.PORT || 3000;
 
-const servidor = app.listen(PORT, '127.0.0.1', () => {
-    console.log(`Servidor EncuentraU activo en http://localhost:${PORT}`);
+const servidor = app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Servidor EncuentraU activo en el puerto ${PORT}`);
 });
 
 servidor.on('error', (error) => {
