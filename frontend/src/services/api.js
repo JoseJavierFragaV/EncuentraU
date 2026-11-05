@@ -1,5 +1,4 @@
-
-const API_URL = 'http://localhost:3000/api';
+﻿const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
 // Función para realizar peticiones al backend
 export const apiRequest = async (endpoint, options = {}, token = null) => {
@@ -9,7 +8,6 @@ export const apiRequest = async (endpoint, options = {}, token = null) => {
             ...options.headers
         };
 
-        // Agregar token cuando el usuario esté autenticado
         if (token) {
             headers.Authorization = `Bearer ${token}`;
         }
