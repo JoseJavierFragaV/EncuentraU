@@ -1,8 +1,7 @@
-
-# Dependencias de Node.js
+﻿# Dependencias de Node.js
 node_modules/
 
-# Variables de entorno y contraseñas
+# Variables de entorno y credenciales
 .env
 .env.*
 !.env.example
@@ -10,7 +9,21 @@ node_modules/
 # Archivos generados
 dist/
 build/
+coverage/
 
-# Archivos del sistema
+# Respaldos y datos de PostgreSQL
+/database/data.sql
+*.backup
+*.dump
+*.bak
+/database/backups/
+
+# Archivos de registro
+*.log
+
+# Archivos de despliegue local
+.vercel/
+
+# Archivos temporales
 .DS_Store
 Thumbs.db
